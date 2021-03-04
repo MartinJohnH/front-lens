@@ -77,12 +77,12 @@ export function useFrontLens() {
     },[isCMDPressed]);
 
     useEffect(() => {
-        document.addEventListener("click", handleOnClickTest);
+        //document.addEventListener("click", handleOnClickTest);
         document.addEventListener("keydown",handleOnCMDDown);
         document.addEventListener("keyup",handleOnCMDUp);
         document.addEventListener("mousemove",handleMouseMove);
         return () => {
-            document.removeEventListener("click", handleOnClickTest);
+            //document.removeEventListener("click", handleOnClickTest);
             document.removeEventListener("keydown",handleOnCMDDown);
             document.removeEventListener("keyup",handleOnCMDUp);
             document.removeEventListener("mousemove",handleMouseMove);
