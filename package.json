@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/MartinJohnH/front-lens#readme",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "react": "^17.0.1"
   }
 }
