@@ -1,29 +1,30 @@
 import { useState, useEffect } from 'react';
-require('dotenv').config();
+//require('fs');
+//require('dotenv').config();
 
 export function useFrontLens() {
     const [isCMDPressed, setIsCMDPressed] = useState(false);
     const [isShiftPressed, setIsShiftPressed] = useState(false);
     const [hoveredElement, setHoveredElement] = useState(null);
 
-    function handleOnClickTest(e) {
-        let objectDebugInstance = Object.values(e.target)[0];
-        if ((e.metaKey || e.ctrlKey) && Object.values(objectDebugInstance)[29]) {
-            let elementEditorInfo = Object.values(objectDebugInstance)[29];
-            if (elementEditorInfo) {
-                console.log(Object.values(objectDebugInstance));
-                let elementURL = elementEditorInfo.fileName.split(process.PROJECT_DIR)[1];
-                let myWindow = window.open(process.WEBSTORM_LOCALHOST + elementURL + ":" + elementEditorInfo.lineNumber + ":" + elementEditorInfo.columnNumber);
-                let timer  = setTimeout(function(){
-                    myWindow.close();
-                }, 300);
-
-                return () => {
-                    clearTimeout(timer);
-                }
-            }
-        }
-    }
+    // function handleOnClickTest(e) {
+    //     let objectDebugInstance = Object.values(e.target)[0];
+    //     if ((e.metaKey || e.ctrlKey) && Object.values(objectDebugInstance)[29]) {
+    //         let elementEditorInfo = Object.values(objectDebugInstance)[29];
+    //         if (elementEditorInfo) {
+    //             console.log(Object.values(objectDebugInstance));
+    //             let elementURL = elementEditorInfo.fileName.split(process.PROJECT_DIR)[1];
+    //             let myWindow = window.open(process.WEBSTORM_LOCALHOST + elementURL + ":" + elementEditorInfo.lineNumber + ":" + elementEditorInfo.columnNumber);
+    //             let timer  = setTimeout(function(){
+    //                 myWindow.close();
+    //             }, 300);
+    //
+    //             return () => {
+    //                 clearTimeout(timer);
+    //             }
+    //         }
+    //     }
+    // }
 
     function handleOnCMDDown(e) {
         if (e.metaKey || e.ctrlKey) {
