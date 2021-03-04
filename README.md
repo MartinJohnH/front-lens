@@ -1,2 +1,2 @@
 # front-lens
-Frontend development tool for WebStorm
+Frontend development tool for React using WebStorm
