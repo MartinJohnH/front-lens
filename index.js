@@ -12,8 +12,8 @@ export function useFrontLens(projectDir, webstormLocalhost) {
             let elementEditorInfo = Object.values(objectDebugInstance)[29];
             if (elementEditorInfo) {
                 //console.log(Object.values(objectDebugInstance));
-                let elementURL = elementEditorInfo.fileName.split(projectDir)[1];
-                let myWindow = window.open(webstormLocalhost + elementURL + ":" + elementEditorInfo.lineNumber + ":" + elementEditorInfo.columnNumber);
+                let elementURL = elementEditorInfo["fileName"].split(projectDir)[1];
+                let myWindow = window.open(webstormLocalhost + "/api/file/" + elementURL + ":" + elementEditorInfo.lineNumber + ":" + elementEditorInfo.columnNumber);
                 let timer  = setTimeout(function(){
                     myWindow.close();
                 }, 300);
