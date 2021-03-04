@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-export function useFrontLens() {
+export function useFrontLens({projectDir, webstormLocalhost}) {
     const [isCMDPressed, setIsCMDPressed] = useState(false);
     const [isShiftPressed, setIsShiftPressed] = useState(false);
     const [hoveredElement, setHoveredElement] = useState(null);
@@ -11,8 +11,8 @@ export function useFrontLens() {
             let elementEditorInfo = Object.values(objectDebugInstance)[29];
             if (elementEditorInfo) {
                 console.log(Object.values(objectDebugInstance));
-                let elementURL = elementEditorInfo.fileName.split(process.PROJECT_DIR)[1];
-                let myWindow = window.open(process.WEBSTORM_LOCALHOST + elementURL + ":" + elementEditorInfo.lineNumber + ":" + elementEditorInfo.columnNumber);
+                let elementURL = elementEditorInfo.fileName.split(projectDir)[1];
+                let myWindow = window.open(webstormLocalhost + elementURL + ":" + elementEditorInfo.lineNumber + ":" + elementEditorInfo.columnNumber);
                 let timer  = setTimeout(function(){
                     myWindow.close();
                 }, 300);
