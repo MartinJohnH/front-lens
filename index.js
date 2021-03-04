@@ -1,5 +1,4 @@
-//import { useState, useEffect } from 'react';
-//require('fs');
+import { useState, useEffect } from 'react';
 //require('dotenv').config();
 
 export function useFrontLens() {
