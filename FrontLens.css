@@ -1,56 +1,47 @@
 .cmd-select-style *:hover {
-    outline: 2px dotted #1E46BE !important;
     cursor: pointer !important;
+    outline: 2px dotted #1E46BE !important;
     position: relative;
 }
 
-.cmd-select-style *[data-element-name]:hover:before {
-    border-bottom: 2px dotted #1E46BE !important;
-    border-right: 2px dotted #1E46BE !important;
-    content: attr(data-element-name) !important;
-    position: absolute;
-    top: -1px;
-    left: 0;
-    background: rgba(237, 243, 255, 1) !important;
-    color: #1E46BE !important;
-    font-size: 14px;
-    padding: 4px;
-    text-transform: lowercase;
-    font-weight: normal;
-    font-family: monospace;
-    margin: 0;
-    min-width: 40px;
-    line-height: 1.5;
-    z-index: 100;
+.cmd-select-style *:hover:before {
+    font-family: monospace !important;
+    font-size: 14px !important;
+    font-weight: normal !important;
+    left: 0 !important;
+    line-height: 1.5 !important;
+    margin: 0 !important;
+    min-width: 40px !important;
+    padding: 4px !important;
+    position: absolute !important;
+    text-transform: lowercase !important;
+    top: -1px !important;
+    z-index: 100 !important;
 }
 
 .cmd-select-style *[data-element-name]:hover {
     box-shadow: 0 0 0 6px #edf3ff !important;
 }
 
+.cmd-select-style *[data-element-name]:hover:before {
+    background: rgba(237, 243, 255, 1) !important;
+    border-bottom: 2px dotted #1E46BE !important;
+    border-right: 2px dotted #1E46BE !important;
+    color: #1E46BE !important;
+    content: attr(data-element-name) !important;
+}
+
 .cmd-select-style *[data-class-name]:hover {
     box-shadow: 0 0 0 6px #f7edff !important;
+    cursor: pointer !important;
     outline: 2px dotted #663399 !important;
-    cursor: pointer;
     position: relative;
 }
 
 .cmd-select-style *[data-class-name]:hover:before {
-    content: attr(data-class-name) !important;
-    color: #663399 !important;
     background: rgba(247, 237, 255, 1) !important;
     border-bottom: 2px dotted rebeccapurple !important;
     border-right: 2px dotted rebeccapurple !important;
-    position: absolute;
-    top: -1px;
-    left: 0;
-    font-size: 14px;
-    padding: 4px;
-    text-transform: lowercase;
-    font-weight: normal;
-    font-family: monospace;
-    margin: 0;
-    min-width: 40px;
-    line-height: 1.5;
-    z-index: 100;
+    color: #663399 !important;
+    content: attr(data-class-name) !important;
 }
