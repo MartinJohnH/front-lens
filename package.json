@@ -1,6 +1,6 @@
 {
   "name": "front-lens",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Frontend development tool for WebStorm",
   "main": "index.js",
   "scripts": {
@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/MartinJohnH/front-lens#readme",
   "dependencies": {
-    "react": "^16.12.0"
+    "react": "^17.0.1"
   }
 }
