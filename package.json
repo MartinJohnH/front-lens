@@ -1,6 +1,6 @@
 {
   "name": "front-lens",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Frontend development tool for WebStorm",
   "main": "index.js",
   "scripts": {

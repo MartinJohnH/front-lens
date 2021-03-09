@@ -9,10 +9,21 @@ export function useFrontLens(projectDir, webstormLocalhost) {
     function getWebstormURL(objectDebugInstance) {
         if (Object.values(objectDebugInstance)[29]) {
             let elementEditorInfo = Object.values(objectDebugInstance)[29];
-            let codeFileURL = elementEditorInfo["fileName"].split(projectDir)[1];
-            let codeFileLineNum = elementEditorInfo.lineNumber;
-            let codeFileColNum = elementEditorInfo.columnNumber;
-            return (webstormLocalhost + "/api/file/" + codeFileURL + ":" + codeFileLineNum + ":" + codeFileColNum);
+            if(elementEditorInfo["fileName"]) {
+                let codeFileURL = elementEditorInfo["fileName"].split(projectDir)[1];
+                let codeFileLineNum = elementEditorInfo.lineNumber;
+                let codeFileColNum = elementEditorInfo.columnNumber;
+                return (webstormLocalhost + "/api/file/" + codeFileURL + ":" + codeFileLineNum + ":" + codeFileColNum);
+            }
+        }
+        if (Object.values(objectDebugInstance)[28]) {
+            let elementEditorInfo = Object.values(objectDebugInstance)[28];
+            if(elementEditorInfo["fileName"]) {
+                let codeFileURL = elementEditorInfo["fileName"].split(projectDir)[1];
+                let codeFileLineNum = elementEditorInfo.lineNumber;
+                let codeFileColNum = elementEditorInfo.columnNumber;
+                return (webstormLocalhost + "/api/file/" + codeFileURL + ":" + codeFileLineNum + ":" + codeFileColNum);
+            }
         }
         return null;
     }
